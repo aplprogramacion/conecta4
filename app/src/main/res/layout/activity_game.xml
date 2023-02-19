@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondointro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/player_1"
+                android:textSize="30sp"
+                android:textColor="@color/red"/>
+
+            <TextView
+                android:id="@+id/player1ScoreTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/winner"
+                android:textSize="20sp"
+                android:textColor="@color/red"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="120dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/player_2"
+                android:textSize="30sp"
+                android:textColor="@color/yellow"/>
+
+            <TextView
+                android:id="@+id/player2ScoreTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/winner"
+                android:textSize="20sp"
+                android:textColor="@color/yellow"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/title"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/connect_four_game_title"/>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="20dp"
+        android:columnCount="7"
+        android:rowCount="6"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false"
+        android:rowOrderPreserved="false">
+
+        <!-- Add ImageViews to represent the game board grid -->
+        <android.widget.Button
+            android:id="@+id/iv50"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv51"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv52"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv53"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv54"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv55"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv56"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv40"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv41"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv42"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv43"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv44"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv45"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv46"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv30"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv31"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv32"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv33"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv34"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv35"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv36"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv23"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv24"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv25"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv26"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv13"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv14"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv15"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv16"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv00"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv01"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv02"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv03"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv04"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv05"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+        <android.widget.Button
+            android:id="@+id/iv06"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:background="@drawable/tablero"
+            android:src="@drawable/tablero"
+            android:contentDescription="@string/game_board_cell"/>
+
+    </GridLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Buttons to reset and quit the game -->
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/reset" />
+
+        <Button
+            android:id="@+id/quitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/quit" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
