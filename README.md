@@ -1,3 +1,4 @@
 # conecta4
 ![This is an image](https://github.com/aplprogramacion/conecta4/blob/master/imagenjuegocompleto.png)
+
 El código implementa el juego Connect Four en Android. La clase GameActivity hereda de AppCompatActivity y utiliza un GridLayout para mostrar la cuadrícula de fichas del juego. Los botones de la cuadrícula se configuran con un listener para detectar cuando un usuario ha hecho clic en una casilla del tablero, lo que actualizará el estado del juego. Las variables currentPlayer y turn mantienen el estado actual del juego, y la función checkWinner verifica si un jugador ha ganado. Las funciones getEmptyRow y resetGame se utilizan para mantener el estado del juego y actualizar el tablero cuando se produce un reinicio del juego. La aplicación también proporciona dos botones, "Reset" y "Quit", para que el usuario pueda reiniciar el juego o salir de la aplicación.
